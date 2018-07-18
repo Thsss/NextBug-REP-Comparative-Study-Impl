@@ -145,7 +145,7 @@ public class MozillaConnection {
     
     public static String makeDevStringUrl(String DevLogin){
         //return ("https://bugzilla.mozilla.org/user_profile?login="+DevLogin);
-        return ("https://bugzilla.mozilla.org/user_profile?login="+DevLogin+"&Bugzilla_login=hscrocha@gmail.com&Bugzilla_password=Toscomor1*&Bugzilla_remember=on");
+    	return ("https://bugzilla.mozilla.org/user_profile?login="+DevLogin+"&Bugzilla_login=hscrocha@gmail.com&Bugzilla_password=Toscomor1*&Bugzilla_remember=on");
     }
     
     public static URL makeDevUrl(String DevLogin) throws MalformedURLException {

@@ -25,8 +25,8 @@ public abstract class BaseDados {
     
     protected Connection connectDatabase(){
         String jdbcURL = "jdbc:mysql://localhost:3306/"+SchemaName;
-        String user = "henrique";
-        String password = "this is not my real passcode";
+        String user = "bugs";
+        String password = "7884585";
 
         Connection Con = null;
 
@@ -35,14 +35,16 @@ public abstract class BaseDados {
             Con = DriverManager.getConnection(jdbcURL, user, password);
             Con.setAutoCommit(true);
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("数据库连接失败");
+            e.printStackTrace();
         }finally{
             return Con;
         }
     }
 
     public int executeUpdate(String sql) throws SQLException {
-        Statement St = getConnection().createStatement();
+    	//System.out.print(sql);
+    	Statement St = getConnection().createStatement();
         return St.executeUpdate(sql);
     }
 
