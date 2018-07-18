@@ -58,8 +58,8 @@ public abstract class BaseDados {
     }
 
     public Connection getConnection() throws SQLException{
-        if(Conexao.isClosed() || !Conexao.isValid(0)){
-            Conexao=connectDatabase();
+        if(Conexao == null || Conexao.isClosed() || !Conexao.isValid(0)){
+            Conexao = connectDatabase();
         }
         return Conexao;
     }

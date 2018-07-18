@@ -1,0 +1,7 @@
+% Title: Firefox Sparse Bugs/Terms Vectors 
+% Word Hash can found in <filename_without_extension>_word_hash.csv 
+% Creator: Henrique S. C. Rocha 
+% 
+@relation 'bugapp'
+@attribute 'bug_id' numeric 
+@data 

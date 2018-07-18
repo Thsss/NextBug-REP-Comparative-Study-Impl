@@ -81,8 +81,8 @@ public class XprisTable extends javax.swing.JTable{
     }
     
     /**
-     * Inicializa as variavéis sistemáticas do XprisTable
-     * NÃO UTILIZAR. Esse método é chamado automaticamente.
+     * Inicializa as variavï¿½is sistemï¿½ticas do XprisTable
+     * Nï¿½O UTILIZAR. Esse mï¿½todo ï¿½ chamado automaticamente.
      */
     protected void initVariables(){
         if(CompleteColSizes==null){
@@ -102,9 +102,9 @@ public class XprisTable extends javax.swing.JTable{
     }
     
     /**
-     * Seta os Títulos de TODAS as colunas do XprisTable
+     * Seta os Tï¿½tulos de TODAS as colunas do XprisTable
      *
-     * @param newTitle Vetor contendo os títulos das colunas
+     * @param newTitle Vetor contendo os tï¿½tulos das colunas
      */
     public void setTitle(String[] newTitle){
         CompleteTitle.clear();
@@ -120,10 +120,10 @@ public class XprisTable extends javax.swing.JTable{
     }
     
     /**
-     * Seta o título de uma coluna do XprisTable
+     * Seta o tï¿½tulo de uma coluna do XprisTable
      *
-     * @param ColIndex Índice da coluna baseado nos dados completos.
-     * @param newTitle O novo título da coluna
+     * @param ColIndex ï¿½ndice da coluna baseado nos dados completos.
+     * @param newTitle O novo tï¿½tulo da coluna
      */
     public void setTitle(int ColIndex, String newTitle){
         VisibleTitle.set(getVisibleColumnIndex(ColIndex),newTitle);
@@ -134,7 +134,7 @@ public class XprisTable extends javax.swing.JTable{
     
     /**
      * Seta o tamanho em pixels de uma coluna do XprisTable
-     * @param ColIndex Índice da coluna baseado nos dados completos.
+     * @param ColIndex ï¿½ndice da coluna baseado nos dados completos.
      * @param Size Tamanho em pixels da coluna
      */
     public void setColumnSize(int ColIndex, int Size){
@@ -152,7 +152,7 @@ public class XprisTable extends javax.swing.JTable{
     }
     
     /**
-     * Método protegido que pega cada <code>TableColumn</code> e altera seu preferred width.
+     * Mï¿½todo protegido que pega cada <code>TableColumn</code> e altera seu preferred width.
      */
     protected void setColumnSize(){
         if(CompleteColSizes!=null){
@@ -171,16 +171,16 @@ public class XprisTable extends javax.swing.JTable{
     }
     
     /**
-     * Indica se a coluna poderá ser editada pelo usuário. Valor default false.
-     * @param ColIndex Índice da coluna baseado nos dados completos.
-     * @param aFlag True se o usuário puder editar a coluna, False caso o contrário.
+     * Indica se a coluna poderï¿½ ser editada pelo usuï¿½rio. Valor default false.
+     * @param ColIndex ï¿½ndice da coluna baseado nos dados completos.
+     * @param aFlag True se o usuï¿½rio puder editar a coluna, False caso o contrï¿½rio.
      */
     public void setColumnEditable(int ColIndex, boolean aFlag){
         CompleteColEditable[ColIndex]=aFlag;
     }
     
     /**
-     * Seta se o usuário poderá editar cada uma das colunas do XprisTable.
+     * Seta se o usuï¿½rio poderï¿½ editar cada uma das colunas do XprisTable.
      */
     public void setColumnEditable(boolean[] Flags){
         CompleteColEditable=Flags;
@@ -269,12 +269,12 @@ public class XprisTable extends javax.swing.JTable{
     }
     
     /**
-     * Retorna o objeto na posição especificada, mesmo que esteja invisivel.
+     * Retorna o objeto na posiï¿½ï¿½o especificada, mesmo que esteja invisivel.
      *
-     * ATENÇÃO: Se estiver usando o método pra exibir colunas utilizar o metodo
-     * get(int row, String colName) para ter certeza que o dado retornado será o correto.
+     * ATENï¿½ï¿½O: Se estiver usando o mï¿½todo pra exibir colunas utilizar o metodo
+     * get(int row, String colName) para ter certeza que o dado retornado serï¿½ o correto.
      *
-     * @return O objeto na posição indicada
+     * @return O objeto na posiï¿½ï¿½o indicada
      */
     public Object get(int row, int col){
         return CompleteData.get(row).get(col);
@@ -412,7 +412,7 @@ public class XprisTable extends javax.swing.JTable{
                 
                 CompleteLine.add(dat);
                 
-                //Antes de adicionar aos dados visiveis é preciso verificar se a coluna é visivel
+                //Antes de adicionar aos dados visiveis ï¿½ preciso verificar se a coluna ï¿½ visivel
                 if(j<VisibleTitle.size() && CompleteTitle.get(i).equalsIgnoreCase(VisibleTitle.get(j))){
                     VisibleLine.add(dat);
                     j++;
@@ -432,7 +432,7 @@ public class XprisTable extends javax.swing.JTable{
         Vector<Object> VisibleLine=new Vector<Object>();
         for(int i=0, j=0; i<CompleteTitle.size(); i++){
             
-            //Antes de adicionar aos dados visiveis é preciso verificar se a coluna é visivel
+            //Antes de adicionar aos dados visiveis ï¿½ preciso verificar se a coluna ï¿½ visivel
             if(j<VisibleTitle.size() && CompleteTitle.get(i).equalsIgnoreCase(VisibleTitle.get(j))){
                 VisibleLine.add(CompleteRowData.get(i));
                 j++;
@@ -467,7 +467,7 @@ public class XprisTable extends javax.swing.JTable{
                 
                 CompleteLine.add(dat);
                 
-                //Antes de adicionar aos dados visiveis é preciso verificar se a coluna é visivel
+                //Antes de adicionar aos dados visiveis ï¿½ preciso verificar se a coluna ï¿½ visivel
                 if(j<VisibleTitle.size() && CompleteTitle.get(i).equalsIgnoreCase(VisibleTitle.get(j))){
                     VisibleLine.add(dat);
                     j++;
@@ -504,14 +504,14 @@ public class XprisTable extends javax.swing.JTable{
                     dat=Rs.getString(i+1);
                 CompleteLine.add(dat);
                 
-                //Antes de adicionar aos dados visiveis é preciso verificar se a coluna é visivel
+                //Antes de adicionar aos dados visiveis ï¿½ preciso verificar se a coluna ï¿½ visivel
                 if(j<VisibleTitle.size() && CompleteTitle.get(i).equalsIgnoreCase(VisibleTitle.get(j))){
                     VisibleLine.add(dat);
                     j++;
                 }
             }
             
-            //Verificar se item já não existe
+            //Verificar se item jï¿½ nï¿½o existe
             for(i=0; i<CompleteData.size(); i++){
                 if(CompleteData.get(i).equals(CompleteLine)){
                     RowIndex=i;
@@ -519,7 +519,7 @@ public class XprisTable extends javax.swing.JTable{
                 }
             }
             
-            //Dado não existe na tabela, adicionar
+            //Dado nï¿½o existe na tabela, adicionar
             if(RowIndex<0){
                 CompleteData.add(CompleteLine);
                 VisibleData.add(VisibleLine);
@@ -641,7 +641,7 @@ public class XprisTable extends javax.swing.JTable{
         int i, j;
         
         if(VisibleColIndex>=0){
-            //Verificar se o usário não está tentando exibir uma coluna que já está visivel.
+            //Verificar se o usï¿½rio nï¿½o estï¿½ tentando exibir uma coluna que jï¿½ estï¿½ visivel.
             if(getVisibleColumnIndex(VisibleColIndex)>=0) return;
             
             //Encontrar o indice relativo ao dados visiveis
@@ -656,7 +656,7 @@ public class XprisTable extends javax.swing.JTable{
                 VisibleData.get(i).insertElementAt(CompleteData.get(i).get(VisibleColIndex),j);
             }
             
-            //Refaz o modelo de exibição da tabela com os novos dados
+            //Refaz o modelo de exibiï¿½ï¿½o da tabela com os novos dados
             tmdModelo.setDataVector(VisibleData,VisibleTitle);
             setColumnSize();
         }
@@ -673,7 +673,7 @@ public class XprisTable extends javax.swing.JTable{
         if(this.getSelectedRowCount()==1){
             
             if(this.getRowSelectionAllowed() && this.getColumnSelectionAllowed()){
-                //Seleção de celula, comparar linha e coluna
+                //Seleï¿½ï¿½o de celula, comparar linha e coluna
                 if(Row==LastSelectedRow && Col==LastSelectedCol){
                     LastSelectedRow=-1;
                     LastSelectedCol=-1;
@@ -957,9 +957,9 @@ public class XprisTable extends javax.swing.JTable{
             "Retornar"};
             int answer = javax.swing.JOptionPane.showOptionDialog(
                     javax.swing.SwingUtilities.getWindowAncestor(ftf),
-                    "O valor deve ser um número inteiro ou decimal separado por virgula.\n"
-                    + "Você pode continuar editando ou retornar ao ultimo valor válido. ",
-                    "Texto Inválido Digitado",
+                    "O valor deve ser um nï¿½mero inteiro ou decimal separado por virgula.\n"
+                    + "Vocï¿½ pode continuar editando ou retornar ao ultimo valor vï¿½lido. ",
+                    "Texto Invï¿½lido Digitado",
                     javax.swing.JOptionPane.YES_NO_OPTION,
                     javax.swing.JOptionPane.ERROR_MESSAGE,
                     null,options, options[1]);
